@@ -8,9 +8,9 @@
 // const obj = { name, 	age }
 // const obj1 = {name : name, age: age };
 
-//6. 전개 구문 Spread
+// 6. 전개 구문 Spread Operator
 
-//배열이나 객체를 전개. 구조분해할당과 함께 많이 사용.
+// 배열이나 객체를 전개. 구조분해할당과 함께 가장 많이 사용되는 ES6 문법 중 하나
 
 // 배열
 // let arr = [1, 2, 3];

@@ -4,11 +4,11 @@
 
 // function add(){ }
 
-//var add = function (){}
+// var add = function (){}
 
-//var add = (x) => {
-//return 1;
-//};
+// var add = (x) => {
+// return 1;
+// };
 
 // var add = (x) => 1
 
@@ -16,7 +16,7 @@
 
 // condition ? true 인 경우 : false인 경우;
 
-//console.log(true ? "참" : "거짓"); // 참
-//console.log(false ? "참" : "거짓"); // 거짓
-//console.log(1 === 1 ? "참" : "거짓"); // 참
-//console.log(1 !== 1 ? "참" : "거짓"); // 거짓
+// console.log(true ? "참" : "거짓"); // 참
+// console.log(false ? "참" : "거짓"); // 거짓
+// console.log(1 === 1 ? "참" : "거짓"); // 참
+// console.log(1 !== 1 ? "참" : "거짓"); // 거짓
