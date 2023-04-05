@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>숫자야구</title>
   </head>
   <body>
     <script>
       let numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-      let pickNum = [];
+      let pickList = [];
 
       for (let i = 0; i < 3; i++) {
         let pick = Math.floor(Math.random() * numList.length);
@@ -23,44 +23,57 @@
         // numList.length // 10
         //Math.floor(Math.random() * numList.length); = 0~9 사이의 정수
 
-        pickNum = pickNum.concat(numList.splice(pick, 1));
-        //pickNum[i] = numList.splice(pick, 1)[0]; // 이렇게로도 대체할 수 있는데 [0]가 잘 이해안간다
+        pickList = pickList.concat(numList.splice(pick, 1));
+        //pickList 배열은 numList 배열에서 pick 인덱스에 해당하는 요소를 제거한 후에, 해당 요소를 추가한 배열
+
+        //splice() 는 배열에서 요소를 제거하는 메소드, 첫 번째 매개변수는 제거할 요소의 인덱스, 두 번째 매개변수는 제거할 요소의 개수. 여기서는 하나의 요소만 제거 .
+        console.log(pickList);
       }
       // 여기까지 하면 랜덤한 숫자 세 개가 pickNum에 들어가게 하고 이미뽑힌 건 제외하고 돌릴 수 있다
+
       //concat() 함수는 텍스트나 선택된 여러 개의 범위를 입력 순서대로 결합시켜서 반환해주는데 여러 배열을 하나로 만들어주는 역할도 해줌
 
-      //prompt 써서 입력받아볼까요
+      //이제 prompt 써서 입력을....받아볼까요....
 
       let strike = 0;
       let ball = 0;
       let count = 0;
 
       while (true) {
-        let input = prompt("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!"); //숫자 입력받은 거 문자열로 입력된다 입력 받은 값을 input에 저장
-        let inputArr = input.split(""); //입력받은 값을 세 개로 따로 나눠주자 split()함수는 문자열을 쪼개서 배열로 만들어준다 "" 구분자는 한글자씩 구분하라는 뜻
+        let input = prompt("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!"); //숫자 입력받은 거 문자열로 입력된다. 입력 받은 값을 input에 저장
+        while (input.length != 3) {
+          alert("3자리 수를 입력해주세요");
+          input = prompt("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!");
+        }
+        let inputArr = input.split(""); //입력받은 값을 세 개로 따로 나눠주자
+        // split()함수는 문자열을 쪼개서 배열로 만들어준다 "" 구분자는 한글자씩 구분하라는 뜻
 
         strike = 0;
         ball = 0;
         count++;
-        // 이제 컴퓨터가 만든 숫자와 입력받은 숫자를 비교해야됨
-
+        //console.log(inputArr);
+        //console.log(count);
+        // // 이제 컴퓨터가 만든 숫자와 입력받은 숫자를 비교해야됨
+        // inputArr의 요소와 pickList의 요소를 비교할건데
         for (let a = 0; a < 3; a++) {
           for (let b = 0; b < 3; b++) {
-            if (pickNum[a] === inputArr[b]) {
-              if (a === b) {
-                strike++;
-              } else {
-                ball++;
-              }
-              break;
+            if (inputArr[a] == pickList[b] && a == b) {
+              // 동일한 위치에 동일한 값.
+              strike++;
+            } else if (a != b && inputArr[a] == pickList[b]) {
+              //값은 같지만, 위치는 다른 경우.
+              ball++;
             }
           }
         }
         if (strike === 3) {
-          console.log(count - 1 + "번 만에 맞추셨습니다. 게임을 종료합니다.");
+          alert(count + "번 만에 맞추셨습니다. 게임을 종료합니다.");
           break;
         } else {
-          console.info(inputArr.join("") + ": " + ball + "B" + strike + "S");
+          alert(
+            `${count} 번째 시도 : ${inputArr.join("")}
+      ${ball}B${strike}S `
+          ); // join() 배열 모든 요소를 연결해서 하나의 문자열로 만들기
         }
       }
     </script>

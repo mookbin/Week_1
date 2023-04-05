@@ -11,6 +11,10 @@ for (const key of myMap.keys()) {
   // three;
 }
 
+// myMap.forEach((key) => {
+//   console.log(key);
+// });
+
 console.log(myMap.values()); //[Map Iterator] { 1, 2, 3 }
 for (const value of myMap.values()) {
   console.log(value);

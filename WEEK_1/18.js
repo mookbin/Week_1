@@ -31,16 +31,16 @@
 //   i++;
 // } while (i < 10);
 
-// for (let i = 0; i < 10; i++) {
-//   if (i === 5) {
-//     break; // 5가 되면 스탑
-//   }
-//   console.log(i);
-// }
-
 for (let i = 0; i < 10; i++) {
   if (i === 5) {
-    continue; // 0~4까지 정상적으로 찍히다가 5가 되면 밑으로 흐르지 않고 다음 순서 for문, i로 넘어감
+    break; // 5가 되면 스탑
   }
   console.log(i);
 }
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 5) {
+//     continue; // 0~4까지 정상적으로 찍히다가 5가 되면 밑으로 흐르지 않고 다음 순서 for문, i로 넘어감
+//   }
+//   console.log(i);
+// }
