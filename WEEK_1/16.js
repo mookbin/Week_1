@@ -60,12 +60,12 @@
 
 // (1) forEach
 
-// let numbers = [4, 1, 5, 4, 5];
+let numbers = [4, 1, 5, 4, 5];
 
-// //매개변수 자리에 함수를 넣는 것 : 콜백 함수
-// numbers.forEach(function (item) {
-//   console.log("item입니다 =>" + item);
-// });
+//매개변수 자리에 함수를 넣는 것 : 콜백 함수
+numbers.forEach(function (item) {
+  console.log("item입니다 =>" + item);
+});
 
 // // (2) map 기존에 있었던 배열을 가공해서 새로운 배열을 생성하는 역할
 // // 항상 원본 배열의 길이 만큼이 리턴된다.
@@ -85,12 +85,12 @@
 
 //(4) find
 
-let numbers = [4, 1, 5, 4, 5];
-let result = numbers.find(function (item) {
-  return item > 3; // 조건에 맞는 것중 첫번째로 들어오는 것만 반환
-});
+// let numbers = [4, 1, 5, 4, 5];
+// let result = numbers.find(function (item) {
+//   return item > 3; // 조건에 맞는 것중 첫번째로 들어오는 것만 반환
+// });
 
-console.log(result); //4
+// console.log(result); //4
 
 //forEach 를 제외한 나머지는 다 리턴문 이 필요했다.
 // return 문이 필요했던 것들은 모두 다 새로운 배열을 내뱉었다.

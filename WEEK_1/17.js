@@ -27,6 +27,12 @@ for (let i = 0; i < 11; i++) {
   }
 }
 
+// 2는 2의 배수입니다!
+// 4는 2의 배수입니다!
+// 6는 2의 배수입니다!
+// 8는 2의 배수입니다!
+// 10는 2의 배수입니다!
+
 // for ~in 문
 // 객체의 속성을 출력하는 문법
 
@@ -39,3 +45,7 @@ let person = {
 for (let key in person) {
   console.log(key + ":" + person[key]);
 }
+
+// name: John;
+// age: 30;
+// gender: male;

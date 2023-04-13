@@ -24,12 +24,12 @@
 // do ~ while
 // 일단 한 번 코드를 실행함 그다음 while을 돌림
 
-// let i = 0;
+let i = 0;
 
-// do {
-//   console.log(i);
-//   i++;
-// } while (i < 10);
+do {
+  console.log(i);
+  i++;
+} while (i < 10);
 
 for (let i = 0; i < 10; i++) {
   if (i === 5) {

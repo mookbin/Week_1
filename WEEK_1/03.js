@@ -14,7 +14,7 @@ console.log(str.length); // 13.  띄어쓰기 포함
 let str1 = "Hello, ";
 let str2 = "World!";
 let result = str1.concat(str2);
-// console.log(result);
+console.log(result);
 
 // 2-3. 문자열 자르기
 let str3 = "Hello, World!";
